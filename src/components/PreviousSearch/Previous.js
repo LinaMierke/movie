@@ -1,4 +1,6 @@
+
 export default function Previous() {
+
   return (
     <div>
       <h1 style={{ backgroundColor: "#0061F3" }}> Current Search</h1>

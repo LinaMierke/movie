@@ -1,6 +1,7 @@
-import "../CurrentSearch/Search.css"
+import "../CurrentSearch/Search.css";
 
 export default function Search() {
+
   return (
     <div>
       <h1 style={{ backgroundColor: "#0061F3" }}> Current Search</h1>
