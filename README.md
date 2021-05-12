@@ -1,71 +1,37 @@
-# Getting Started with Create React App
+SEI Take Home Assessment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instructions: 
+Submit links to your github repo and deployed site here
+Due Wednesday 10 AM ET
 
-## Available Scripts
+___________________________________________________________________________
 
-In the project directory, you can run:
+Part 1: What to Watch
 
-### `npm start`
+Goal: Create a simple React application that given a movie title and type will return the movie information from Open Movie Database. It will also keep the last 3 searches in memory
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Example: When given the title symbol Spongebob, your application should use the open movie database to return: the summary of the show, its release date, and ranking. If the ranking is above a 5, display a thumbs up. If it’s below a 5, display a thumbs down.
+Requirements: 
+The application should ingest and render data from the Open Movie Database based on user input.
+https://www.omdbapi.com/ 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+API KEY
+This application must be deployed via Netlify, GitHub, etc.
 
-### `npm test`
+The application should consist of the following components:
+Header - This component should contain a search bar that allows users to search for a film by providing the name of the film via a text field and the option to select the type of film via a dropdown menu
+Movie Card Container - This component should be rendered twice within your application.
+The first instance should render the current film that has been searched
+The second should render a gallery of the two previously searched movies as well as the current film.
+Movie Card - This component should render the following data about a film:
+Title
+Description
+Release Date
+Rating
+Thumb Icon - If the film’s rating is greater than 5 then it should render a thumbs up icon, else it should render a thumbs down icon
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Notes:
+You may use any libraries you think you'll need to complete the task
+Example
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# movie
