@@ -6,8 +6,7 @@ import Search from "./components/CurrentSearch/Search";
 import Previous from "./components/PreviousSearch/Previous";
 
 function App() {
-  const [movies, setMovies] = useState([]);
-  // const [search, setSearch] = useState([]);
+  const [search, setSearch] = useState([]);
 
   useEffect(() => {
     let url = "http://www.omdbapi.com/?i=tt3896198&apikey=8446c93f";
@@ -17,17 +16,16 @@ function App() {
         return res;
       })
       .then((data) => {
-        console.log(data.data.Title, "hi")
-        setMovies(data);
+      setSearch(data);
       });
     // updateReviews();
   }, []);
   // useEffect(() => {
-  
+
   return (
     <div className="App">
       <Header />
-      <Search />
+      <Search information={search} />
       <Previous />
     </div>
   );
