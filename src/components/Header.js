@@ -16,15 +16,20 @@ export default function Header(props) {
     setSelectedTypeValue(e.target.value);
   };
   const handleClick = (e) => {
-    e.preventDefault()//here the prop pass the function we created in the App.js
-    props.fetchMovieData(searchedValue, selectedTypeValue)
-  }
+    e.preventDefault(); //here the prop pass the function we created in the App.js
+    props.fetchMovieData(searchedValue, selectedTypeValue);
+  };
   return (
     <div>
       <h1> What to Watch</h1>
       <div>
-        <input type="text" placeholder="Title" onChange={handleInput}/>
-        <select id="selection" name="slection" placeholder="Type" onChange={handleSelectChange}>
+        <input type="text" placeholder="Title" onChange={handleInput} />
+        <select
+          id="selection"
+          name="slection"
+          placeholder="Type"
+          onChange={handleSelectChange}
+        >
           <option value="" hidden>
             Type
           </option>
