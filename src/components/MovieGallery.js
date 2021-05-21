@@ -7,20 +7,23 @@ export default function MovieGallery(props) {
 
   useEffect(() => {
     setCurrentMovie(props.movieData);
-    setPreviousMovies(previousMovies.concat(props.movieData))
+    setPreviousMovies(previousMovies.concat(props.movieData));
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.movieData]);
 
   const listOfMovieCards = previousMovies.map((movie, i) => {
-    return <MovieCard {...movie} key={i} />
+    return <MovieCard {...movie} key={i} />;
   });
-  const singleMovieCard = <MovieCard {...currentMovie}/>
+  const singleMovieCard = <MovieCard {...currentMovie} />;
 
   let renderMovie = () =>
-    (props.recentGallery === true) ? listOfMovieCards : singleMovieCard;
-    // to check the length and don't keep all 
+    props.recentGallery === true ? listOfMovieCards : singleMovieCard;
 
-    if(previousMovies)
+  // to check the length and don't keep all
+  if (previousMovies.length > 3) {
+    previousMovies.splice(0, 1);
+    setPreviousMovies(previousMovies);
+  }
 
   return (
     <div>
